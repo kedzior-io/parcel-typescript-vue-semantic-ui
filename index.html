@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.3/semantic.min.css" integrity="sha256-X47FgDCAI44wjsuI5uHDkwPT4mPb0blh3ezINVokLHA=" crossorigin="anonymous" />  
+</head>
+
+<body>
+
+<div class="ui text container">
+  <div class="ui segment">
+  <h1 class="ui dividing header">Welcome to Semantic UI</h1>
+  </div>
+
+  <div class="ui segment">
+    <h2 class="ui dividing header">No Vue</h2>
+    <div class="ui tabular menu tabs">
+        <div class="item active" data-tab="tab1">Tab1</div>
+        <div class="item" data-tab="tab2">Tab2</div>
+    </div> 
+    <div class="ui tab" data-tab="tab1">
+       After the laws of physics, everything else is opinion.
+    </div>
+    <div class="ui tab" data-tab="tab2">
+      Black holes are where God divided by zero.
+    </div>        
+  </div>  
+
+  <div class="ui segment">
+    <h2 class="ui dividing header">Vue Single File Component</h2>
+    <div id="app1"></div>
+  </div>
+
+  <div class="ui segment">
+    <h2 class="ui dividing header">Vue x-template</h2>  
+    <div id="app2">
+      <my-component :message="message"></my-component>
+      <div class="ui tabular menu tabs">
+          <div class="item active" data-tab="tab1">Tab1</div>
+          <div class="item" data-tab="tab2">Tab2</div>
+      </div> 
+      <div class="ui tab" data-tab="tab1">
+        After the laws of physics, everything else is opinion.
+      </div>
+      <div class="ui tab" data-tab="tab2">
+        Black holes are where God divided by zero.
+      </div>       
+    </div>
+  </div>
+  
+</div>  
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.3/semantic.min.js" integrity="sha256-Dv09sUOqHDkaWvPqBa0GQp6Csd9Q2SkkVP2xtzYgwc0=" crossorigin="anonymous"></script>
+<script src="dist/index.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    App.Init();
+    App.InitSingleFileComponents("Hello from single file component");
+    App.InitXTemplate("Hello from x-template!");
+  });
+
+</script>
+
+<script type="text/x-template" id="my-x-template">
+  <pre style="color:#0000ff">{{message}}</pre>  
+</script>
+
+</html>

@@ -1,1 +1,6 @@
-# parcel-typescript-vue-semantic-ui
+# Parcel + TypeScript + Vue + Semantic UI
+
+
+`npm install`
+
+`npm run dev`
