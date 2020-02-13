@@ -4,7 +4,10 @@ import Foo from './Foo.vue';
 declare var $: any;
 
 export function Init() {
-    $(".tabs .item").tab();
+    $( document ).ready(function() {
+        $(".tabs .item").tab();
+        console.log( "ready!" );
+    });
 }
 
 export function InitSingleFileComponents(myMessage: string) {
